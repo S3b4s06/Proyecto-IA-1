@@ -214,7 +214,7 @@ class Akinator(KnowledgeEngine):
                        v_pop = float(input("¿Nivel de POPULARIDAD (0 a 100)?: \n"))             
                         #Se llama a la función evaluar_perfil_difuso y toma como parametros los valores ingresados por el usuario
                         #y se declara un hecho PerfilDifuso con el valor desfuzzificado de impacto esperado, el cual será utilizado en la regla de desempate
-                       self.declare(PerfilDifuso(evaluar_perfil_difuso(v_pod, v_ame, v_pop)))
+                       self.declare(PerfilDifuso(impacto_esperado=evaluar_perfil_difuso(v_pod, v_ame, v_pop)))
              
              
              except ValueError:
